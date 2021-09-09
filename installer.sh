@@ -1,14 +1,14 @@
 #!/bin/bash
 # 
 --------------------------------------------------------------------------------------
-# SCRIPT : DOWNLOAD AND INSTALL jediepgextream
-# Command: wget wget https://raw.githubusercontent.com/tarezoka/jediepgextream/main/installer.sh -qO - | /bin/sh
+# SCRIPT : DOWNLOAD AND INSTALL JediMakerXtream
+# Command: wget wget https://raw.githubusercontent.com/tarezoka/JediMakerXtream/main/installer.sh -qO - | /bin/sh
 #
 # Configure where we can find things here #
 TMPDIR='/tmp'
 VERSION='2.3'
-PACKAGE='enigma2-plugin-extensions-JediEPGXtream'
-MY_URL='https://raw.githubusercontent.com/tarezoka/jediepgextream/main/'
+PACKAGE='enigma2-plugin-extensions-jediepgxtream'
+MY_URL='https://raw.githubusercontent.com/tarezoka/JediMakerXtream/main/'
 --------------------------------------------------------------------------------------
 
 #  Image Checking  #
