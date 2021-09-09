@@ -3,7 +3,7 @@
 # 
 # SCRIPT : DOWNLOAD AND INSTALL JediMakerXtream #
 # 
-# Command: wget https://raw.githubusercontent.com/emilnabil/jedimakerxtream/main/installer.sh -O - | /bin/sh #
+# Command: wget https://raw.githubusercontent.com/tarekzoka/jedimakerxtream/main/installer.sh -O - | /bin/sh #
 # 
 # Plugin	... jedimaker
 PACKAGE_DIR='JediMakerXtream/main'
@@ -12,7 +12,7 @@ MY_DEB="enigma2-plugin-extensions-jedimakerxtream_6.18_all.deb"
 # Auto ... Do not change
 
 # Decide : which package ?
-MY_MAIN_URL="https://raw.githubusercontent.com/emilnabil/"
+MY_MAIN_URL="https://raw.githubusercontent.com/tarekzoka/"
 if which dpkg > /dev/null 2>&1; then
 	MY_FILE=$MY_DEB
 	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_DEB
@@ -25,7 +25,7 @@ MY_TMP_FILE="/tmp/"$MY_FILE
 echo ''
 echo 'welcome to jediMakerXtream'
 echo '**  STARTED  **'                     
-echo "**  Uploaded by: Emil_Nabil  **"                 
+echo "**  Uploaded by: tarekzoka  **"                 
 echo "WELCOME TO jediMakerXtream"
 echo ''
 
@@ -80,10 +80,3 @@ else
 fi
 
 # --------------------------------------------------------------------------------------
-
-
-
-
-
-
-
