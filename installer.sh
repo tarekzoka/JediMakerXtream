@@ -127,11 +127,11 @@ fi
 ###################
 #  Install Plugin #
 if [ $OSTYPE = "Opensource" ]; then
-    echo "Downloading And Insallling jediepgextream plugin Please Wait ......"
+    echo "Downloading And Insallling JediMakerXtream plugin Please Wait ......"
     wget $MY_URL/${PACKAGE}_${VERSION}_all.ipk -qP $TMPDIR
     $OPKGINSTAL $TMPDIR/${PACKAGE}_${VERSION}_all.ipk
 else
-    echo "Downloading And Insallling jediepgextream plugin Please Wait ......"
+    echo "Downloading And Insallling JediMakerXtream plugin Please Wait ......"
     wget $MY_URL/${PACKAGE}_${VERSION}.deb -qP $TMPDIR
     $DPKINSTALL $TMPDIR/${PACKAGE}_${VERSION}.deb; $OPKGINSTAL -f -y
 fi
@@ -144,7 +144,7 @@ sleep 1; clear
 echo ""
 echo "***********************************************************************"
 echo "**                                                                    *"
-echo "**  Welcome jediepgextream    : $VERSION                             *"
+echo "**  Welcome JediMakerXtream    : $VERSION                             *"
 echo "** Uploaded by: tarezoka                      *"
 echo "**                       Develop by : ZAKARIYA KHA                    *"
 echo "**                                                                    *"
