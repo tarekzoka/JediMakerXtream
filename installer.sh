@@ -1,5 +1,4 @@
-#!/bin/sh
-
+  #!/bin/sh
 # ==============================================
 # SCRIPT : DOWNLOAD AND INSTALL JediMakerXtream #
 # =====================================================================================================================
@@ -9,11 +8,9 @@
 ########################################################################################################################
 # Plugin	... Enter Manually
 ########################################################################################################################
-
 PACKAGE_DIR='JediMakerXtream/main'
 MY_IPK="enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk"
 MY_DEB="enigma2-plugin-extensions-jedimakerxtream_6.18_all.deb"
-
 
 ########################################################################################################################
 # Auto ... Do not change
@@ -24,12 +21,10 @@ MY_MAIN_URL="https://raw.githubusercontent.com/tarekzoka/"
 if which dpkg > /dev/null 2>&1; then
 	MY_FILE=$MY_DEB
 	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_DEB
-else
 	MY_FILE=$MY_IPK
 	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_IPK
 fi
 MY_TMP_FILE="/tmp/"$MY_FILE
-
 echo ''
 echo '************************************************************'
 echo '**                         STARTED                        **'
@@ -38,9 +33,14 @@ echo "**                 Uploaded by: tarekzoka                   **"
 echo "**  https://www.tunisia-sat.com/forums/threads/3898738/   **"
 echo "************************************************************"
 echo ''
-
-# Remove previous file (if any)
-rm -f $MY_TMP_FILE > /dev/null 2>&1
+echo ''
+echo '************************************************************'
+echo '**                         STARTED                        **'
+echo '************************************************************'
+echo "**                 Uploaded by: tarekzoka                   **"
+echo "**  https://www.tunisia-sat.com/forums/threads/3898738/   **"
+echo "************************************************************"
+echo ''
 
 # Download package file
 MY_SEP='============================================================='
@@ -90,15 +90,24 @@ else
 	echo ''
 	echo "Download failed !"
 	exit 1
-fi
-	echo '**                   FINISHED                   **'
+
+echo '**                   FINISHED                   **'
 	echo '**************************************************'
 	echo ''
 	exit 0
-else
-	echo ''
+
+echo ''
 	echo "Download failed !"
 	exit 1
-fi
 
-# 
+#
+
+
+
+
+
+
+
+
+
+
