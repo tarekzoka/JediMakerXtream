@@ -3,7 +3,13 @@
 # SCRIPT : DOWNLOAD AND INSTALL JediMakerXtream #
 # =====================================================================================================================
 # Command: wget https://raw.githubusercontent.com/tarekzoka/JediMakerXtream/main/installer.sh -O - | /bin/sh #
-# =====================================================================================================================
+# 
+opkg install --force-overwrite  https://github.com/tarekzoka/JediMakerXtream/raw/main/enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk
+wait
+sleep 2;
+exit 0
+
+=====================================================================================================================
 
 ########################################################################################################################
 # Plugin	... Enter Manually
