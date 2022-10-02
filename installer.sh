@@ -1,62 +1,51 @@
-  #!/bin/sh
-# ==============================================
-# SCRIPT : DOWNLOAD AND INSTALL JediMakerXtream #
-# =====================================================================================================================
-# Command: wget https://raw.githubusercontent.com/tarekzoka/JediMakerXtream/main/installer.sh -O - | /bin/sh #
+#!/bin/sh
+
 # 
-opkg install --force-overwrite  https://github.com/tarekzoka/JediMakerXtream/raw/main/enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk
-wait
-sleep 2;
-exit 0
+# SCRIPT : DOWNLOAD AND INSTALL EMU OSCAM #
+# ======================================================================================
+# Command: wget https://raw.githubusercontent.com/emilnabil/oscam/main/installer.sh -O - | /bin/sh #
+# ======================================================================================
 
-=====================================================================================================================
+# MY CONFIG SCRIPT #
+###########################################
+PACKAGE_DIR='oscam/main'
+MY_IPK="oscam_11.696_all.ipk"
+MY_DEB="oscam_11.696_all.deb"
 
-########################################################################################################################
-# Plugin	... Enter Manually
-########################################################################################################################
-PACKAGE_DIR='JediMakerXtream/main'
-MY_IPK="enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk"
-MY_DEB="enigma2-plugin-extensions-jedimakerxtream_6.18_all.deb"
-opkg install --force-overwrite  https://github.com/tarekzoka/JediMakerXtream/raw/main/enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk
-wait
-sleep 2;
-exit 0
 
-########################################################################################################################
+######################################################################################
 # Auto ... Do not change
-########################################################################################################################
+######################################################################################
 
 # Decide : which package ?
-MY_MAIN_URL="https://raw.githubusercontent.com/tarekzoka/"
+MY_MAIN_URL="https://raw.githubusercontent.com/emilnabil/"
 if which dpkg > /dev/null 2>&1; then
 	MY_FILE=$MY_DEB
-	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_DEB
+	MY_URL=$MY_MAIN_URL${PACKAGE_DIR}/${MY_DEB}
+else
 	MY_FILE=$MY_IPK
-	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_IPK
+	MY_URL=$MY_MAIN_URL${PACKAGE_DIR}/${MY_IPK}
 fi
 MY_TMP_FILE="/tmp/"$MY_FILE
+
 echo ''
 echo '************************************************************'
 echo '**                         STARTED                        **'
 echo '************************************************************'
-echo "**                 Uploaded by: tarekzoka                   **"
-echo "**  https://www.tunisia-sat.com/forums/threads/3898738/   **"
-echo "************************************************************"
-echo ''
-echo ''
-echo '************************************************************'
-echo '**                         STARTED                        **'
-echo '************************************************************'
-echo "**                 Uploaded by: tarekzoka                   **"
-echo "**  https://www.tunisia-sat.com/forums/threads/3898738/   **"
+#            # WRITE Script By  Biko_73 #                
+# AND MODIFY Script To Work Emu OScam BY    
+ #  EMIL_NABIL  #
 echo "************************************************************"
 echo ''
 
+# Remove previous file (if any)
+rm -f $MY_TMP_FILE > /dev/null 2>&1
+
 # Download package file
-MY_SEP='============================================================='
-echo $MY_SEP
+EM='============================================================='
+echo $EM
 echo 'Downloading '$MY_FILE' ...'
-echo $MY_SEP
+echo $EM
 echo ''
 wget -T 2 $MY_URL -P "/tmp/"
 
@@ -64,21 +53,21 @@ wget -T 2 $MY_URL -P "/tmp/"
 if [ -f $MY_TMP_FILE ]; then
 	# Install
 	echo ''
-	echo $MY_SEP
+	echo $EM
 	echo 'Installation started'
-	echo $MY_SEP
+	echo $EM
 	echo ''
 	if which dpkg > /dev/null 2>&1; then
 		apt-get install --reinstall $MY_TMP_FILE -y
 	else
 		opkg install --force-reinstall $MY_TMP_FILE
 	fi
-	MY_RESULT=$?
+	MY_RES=$?
 
-	# Result
+	# Res
 	echo ''
 	echo ''
-	if [ $MY_RESULT -eq 0 ]; then
+	if [ $MY_RES -eq 0 ]; then
 		echo "   >>>>   SUCCESSFULLY INSTALLED   <<<<"
 		echo ''
 		echo "   >>>>         RESTARING         <<<<"
@@ -95,29 +84,13 @@ if [ -f $MY_TMP_FILE ]; then
 	echo '**                   FINISHED                   **'
 	echo '**************************************************'
 	echo ''
+echo ""
+   wait 2;   
 	exit 0
 else
 	echo ''
 	echo "Download failed !"
 	exit 1
+fi
 
-echo '**                   FINISHED                   **'
-	echo '**************************************************'
-	echo ''
-	exit 0
-
-echo ''
-	echo "Download failed !"
-	exit 1
-
-#
-
-
-
-
-
-
-
-
-
-
+# 
